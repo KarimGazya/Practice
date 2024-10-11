@@ -1,0 +1,33 @@
+const express = require("express");
+const app = express();
+const path = require("path");
+const PORT = process.env.PORT || 3500; //.env file should have PORT
+const mongoose = require("mongoose");
+const {
+  CreateUser,
+  deleteAllusers,
+  getUser,
+} = require("./routes/UserController");
+
+app.get("/test", (req, res) => {
+  //root directory accessed then callback function
+  res.send("Hello world");
+});
+//app listens to this port
+app.listen(PORT, () => console.log(`Server running on port: ${PORT}`));
+
+mongoose
+  .connect(
+    "mongodb+srv://mesogeorge2013:vgEeBjareDjLbjPM@acl.cxhds.mongodb.net/?retryWrites=true&w=majority&appName=ACL"
+  )
+  .then(() => {
+    console.log(`Connected to DB http://localhost:${PORT}`);
+  })
+  .catch(() => {
+    console.log("Connection failed!");
+  });
+
+app.use(express.json());
+app.post("/createUser", CreateUser);
+app.get("/getUsers", getUser);
+app.delete("/deleteAllusers", deleteAllusers);

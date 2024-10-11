@@ -1,0 +1,22 @@
+{
+  "name": "fun-times",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "express": "^4.21.1",
+    "mo": "^1.7.3",
+    "mongoose": "^8.7.1",
+    "ngoose": "^1.1.1",
+    "nodemon": "^3.1.7"
+  }
+}
