@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
 //to create a new user using the data we got from the request body
 const CreateUser = async (req, res) => {
   try {
-    await user.create({
+    await User.create({
       username: req.body.username,
       password: req.body.password,
       email: req.body.email,

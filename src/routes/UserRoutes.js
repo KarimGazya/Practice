@@ -8,6 +8,7 @@ const {
   deleteAllusers,
   getUserById,
 } = require("../controllers/UserController");
+const verifyToken = require("../middleware/authMiddleware");
 
 //example routes to test routing
 //if you go to /api/UserRoutes/hello it will trigger this route

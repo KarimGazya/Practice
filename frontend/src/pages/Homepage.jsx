@@ -1,13 +1,18 @@
-import { useState } from "react";
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import '../css/Homepage.css'; // Assuming the CSS file is located here
 
 const Home = () => {
-  const [username,Setusername] = useState('')
-  console.log(username)
+  const navigate = useNavigate();
+
   return (
-    <div className="home">
-      <label>
-        Text input: <input name="myInput" onChange={e=>Setusername(e.target.value)} />
-      </label>
+    <div className="home-container">
+      <button className="home-button" onClick={() => navigate('/login')}>
+        Login
+      </button>
+      <button className="home-button" onClick={() => navigate('./Signup')}>
+        Sign Up
+      </button>
     </div>
   );
 };
