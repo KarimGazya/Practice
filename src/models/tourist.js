@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
+const User = require("./users");
 
 const touristSchema = new Schema(
   {
@@ -34,7 +35,9 @@ const touristSchema = new Schema(
 );
 
 // Inherit User's schema
-touristSchema.add(userSchema.obj);
+//touristSchema.add(userSchema.obj);
 
-const tourist = mongoose.model("tourist", touristSchema);
-module.exports = tourist;
+//const tourist = mongoose.model("tourist", touristSchema);
+const Tourist = User.discriminator("Tourist", touristSchema);
+
+module.exports = Tourist;

@@ -9,6 +9,7 @@ require("dotenv").config();
 const UserRoutes = require("./routes/UserRoutes");
 const authRoutes = require("./routes/authRoutes");
 const forget = require("./routes/forgetpassRoutes");
+const touristRoutes = require("./routes/touristRoutes");
 
 app.get("/test", (req, res) => {
   //root directory accessed then callback function
@@ -34,6 +35,7 @@ app.use(express.json());
 
 //use the routes created in the routes folder and use it through the path /api/UserRoutes
 app.use("/api/UserRoutes", UserRoutes);
+app.use("/api/touristRoutes", touristRoutes);
 
 //use the routes created for authentication
 app.use("/api/auth", authRoutes);

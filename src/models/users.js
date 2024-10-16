@@ -36,6 +36,8 @@ const userschema = new Schema(
 
   {
     timestamps: true,
+    //added this to discriminate
+    discriminatorKey: "kind", // Key to distinguish between models
   }
 );
 
