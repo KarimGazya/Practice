@@ -30,5 +30,7 @@ router.post("/createuser", CreateUser);
 //route to get a user by putting the id in the params
 router.get("/:id", getUserById);
 
+router.delete("/deleteAll", deleteAllusers);
+
 //to export the routes
 module.exports = router;
