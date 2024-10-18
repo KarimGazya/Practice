@@ -5,12 +5,10 @@ const siteTagSchema = new Schema(
     {
         type: {
             type: String,
-            required: True
         },
 
         historicalPeriod: {
             type: String,
-            required: True
         }
     }
 );
