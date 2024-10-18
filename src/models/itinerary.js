@@ -45,6 +45,10 @@ const itinerarySchema = new Schema(
 
         isBooked: {
             type: Boolean
+        },
+
+        isActive: {
+            type: Boolean
         }
     }
 );
