@@ -1,0 +1,19 @@
+.tour-guide-dashboard {
+    background-color: #f8f9fa;
+    color: #343a40;
+    padding: 20px;
+    margin: 50px auto;
+    width: 80%;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tour-guide-dashboard h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.tour-guide-dashboard p {
+    font-size: 18px;
+}
