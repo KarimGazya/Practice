@@ -16,7 +16,6 @@ app.get("/test", (req, res) => {
   res.send("Hello world");
 });
 //app listens to this port
-app.listen(PORT, () => console.log(`Server running on port: ${PORT}`));
 
 mongoose
   .connect(
@@ -24,6 +23,7 @@ mongoose
   )
   .then(() => {
     console.log(`Connected to DB http://localhost:${PORT}`);
+    app.listen(PORT, () => console.log(`Server running on port: ${PORT}`));
   })
   .catch(() => {
     console.log("Connection failed!");
